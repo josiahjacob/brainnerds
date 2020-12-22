@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'Screens/sign in.dart';
+import 'Screens/sign up.dart';
 
 void main() {
   runApp(MyApp());
@@ -56,7 +58,12 @@ class HomePage extends StatelessWidget {
                     height: 300,
                   ),
                   RaisedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => SignUpScreen()),
+                      );
+                    },
                     child: Text(
                       'Sign Up',
                       style: TextStyle(color: Colors.white),
@@ -64,7 +71,12 @@ class HomePage extends StatelessWidget {
                     color: Colors.pinkAccent,
                   ),
                   RaisedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => SignInScreen()),
+                      );
+                    },
                     child:
                         Text('Sign In', style: TextStyle(color: Colors.white)),
                     color: Colors.blueAccent,
