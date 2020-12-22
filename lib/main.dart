@@ -1,34 +1,80 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 void main() {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Welcome to Flutter',
-      home: Container(
-        decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage("images/logo.png"), fit: BoxFit.cover)),
-        child: Scaffold(
-          backgroundColor: Colors.transparent,
-          appBar: AppBar(
-            elevation: 0,
-            backgroundColor: Colors.transparent,
-            title: Text('My App'),
-            centerTitle: true,
-            leading: IconButton(
-                icon: Icon(
-                  Icons.list,
-                  color: Colors.white,
-                ),
-                onPressed: () {}),
+      home: HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Stack(
+        children: <Widget>[
+          Container(
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage("assets/images/bgimg.png"),
+                    fit: BoxFit.cover)),
           ),
-        ),
+          SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(20.0, 100, 20.0, 20.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: <Widget>[
+                  Text(
+                    "DR MED",
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 24,
+                        fontFamily: 'SourceSansPro',
+                        fontWeight: FontWeight.bold),
+                    textAlign: TextAlign.center,
+                  ),
+                  Text(
+                    "Your Personalised medical assistant",
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.white,
+                      fontFamily: 'SourceSansPro',
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                  SizedBox(
+                    height: 300,
+                  ),
+                  RaisedButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Sign Up',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                    color: Colors.pinkAccent,
+                  ),
+                  RaisedButton(
+                    onPressed: () {},
+                    child:
+                        Text('Sign In', style: TextStyle(color: Colors.white)),
+                    color: Colors.blueAccent,
+                  ),
+                ],
+              ),
+            ),
+          )
+        ],
       ),
     );
   }
+}
