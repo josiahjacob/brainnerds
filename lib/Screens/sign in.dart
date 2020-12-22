@@ -62,6 +62,7 @@ class _SignInScreenState extends State<SignInScreen> {
                           child: Container(
                               margin: EdgeInsets.only(right: 20, left: 10),
                               child: TextField(
+                                obscureText: true,
                                 decoration:
                                     InputDecoration(hintText: 'Password'),
                               ))),
