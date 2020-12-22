@@ -76,6 +76,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     child: Container(
                         margin: EdgeInsets.only(right: 20, left: 10),
                         child: TextField(
+                          obscureText: true,
                           decoration: InputDecoration(hintText: 'Password'),
                         )))
               ],
@@ -90,6 +91,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     child: Container(
                         margin: EdgeInsets.only(right: 20, left: 10),
                         child: TextField(
+                          obscureText: true,
                           decoration:
                               InputDecoration(hintText: 'Confirm Password'),
                         )))
