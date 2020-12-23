@@ -22,24 +22,6 @@ class SplashPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
-                  Text(
-                    "DR MED",
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 24,
-                        fontFamily: 'SourceSansPro',
-                        fontWeight: FontWeight.bold),
-                    textAlign: TextAlign.center,
-                  ),
-                  Text(
-                    "Your Personalised medical assistant",
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.white,
-                      fontFamily: 'SourceSansPro',
-                    ),
-                    textAlign: TextAlign.center,
-                  ),
                   SizedBox(
                     height: 300,
                   ),
