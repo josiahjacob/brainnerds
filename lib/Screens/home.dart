@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'mainhome.dart';
 import 'package:flutter/rendering.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
+import 'reminder.dart';
+import 'message.dart';
+import 'menu.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -26,9 +30,10 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Colors.white,
+        backgroundColor: Theme.of(context).backgroundColor,
         actions: <Widget>[
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -78,19 +83,10 @@ class _HomePageState extends State<HomePage> {
             setState(() => _currentIndex = index);
           },
           children: <Widget>[
-            Container(
-              color: Color(0xffE6EFF9),
-              child: Column(),
-            ),
-            Container(
-              color: Color(0xffE6EFF9),
-            ),
-            Container(
-              color: Color(0xffE6EFF9),
-            ),
-            Container(
-              color: Color(0xffE6EFF9),
-            ),
+            HOME(),
+            Reminder(),
+            Message(),
+            Menu(),
           ],
         ),
       ),
@@ -119,7 +115,7 @@ class _HomePageState extends State<HomePage> {
           BottomNavyBarItem(
             icon: Icon(Icons.message),
             title: Text(
-              'Messages',
+              'Messages test for mes teset test test ',
             ),
             activeColor: Colors.pink,
             textAlign: TextAlign.center,
