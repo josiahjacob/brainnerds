@@ -1,5 +1,5 @@
-import 'package:brainnerds/main.dart';
 import 'package:flutter/material.dart';
+import 'home.dart';
 
 class SignUpScreen extends StatefulWidget {
   @override

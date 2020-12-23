@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'home.dart';
 
 class SignInScreen extends StatefulWidget {
   @override
@@ -79,7 +80,12 @@ class _SignInScreenState extends State<SignInScreen> {
                     child: Container(
                       height: 60,
                       child: RaisedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => HomePage()),
+                          );
+                        },
                         color: Colors.indigo,
                         child: Text(
                           'SIGN IN',
