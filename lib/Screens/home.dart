@@ -26,10 +26,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Theme.of(context).backgroundColor,
+        backgroundColor: Colors.white,
         actions: <Widget>[
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -120,7 +119,7 @@ class _HomePageState extends State<HomePage> {
           BottomNavyBarItem(
             icon: Icon(Icons.message),
             title: Text(
-              'Messages test for mes teset test test ',
+              'Messages',
             ),
             activeColor: Colors.pink,
             textAlign: TextAlign.center,
