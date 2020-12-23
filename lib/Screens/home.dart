@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'mainhome.dart';
 import 'package:flutter/rendering.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'reminder.dart';
 import 'message.dart';
 import 'menu.dart';
+import 'mainhome.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -30,10 +30,9 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Theme.of(context).backgroundColor,
+        backgroundColor: Colors.white,
         actions: <Widget>[
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -44,16 +43,14 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
         ],
-        leading: Padding(
-          padding: const EdgeInsets.only(left: 9.0, top: 10.0, right: 3.0),
-          child: ClipRRect(
-            borderRadius: BorderRadius.all(Radius.circular(13)),
-            child: Container(
-              decoration: BoxDecoration(
-                color: Theme.of(context).backgroundColor,
-              ),
-              child: Image.asset("assets/images/user.png", fit: BoxFit.fill),
+        leading: ClipRRect(
+          borderRadius: BorderRadius.all(Radius.circular(13)),
+          child: Container(
+            margin: EdgeInsets.only(left: 8, top: 10, right: 10),
+            decoration: BoxDecoration(
+              color: Colors.white,
             ),
+            child: Image.asset("assets/images/user.png", fit: BoxFit.fill),
           ),
         ),
         title: Text(
@@ -115,7 +112,7 @@ class _HomePageState extends State<HomePage> {
           BottomNavyBarItem(
             icon: Icon(Icons.message),
             title: Text(
-              'Messages test for mes teset test test ',
+              'Messages',
             ),
             activeColor: Colors.pink,
             textAlign: TextAlign.center,
