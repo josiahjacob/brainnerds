@@ -30,48 +30,50 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.white,
-        actions: <Widget>[
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Icon(
-              Icons.notifications_none,
-              size: 30,
-              color: Colors.grey,
-            ),
-          ),
-        ],
-        leading: ClipRRect(
-          borderRadius: BorderRadius.all(Radius.circular(13)),
-          child: Container(
-            margin: EdgeInsets.only(left: 8, top: 10, right: 10),
-            decoration: BoxDecoration(
-              color: Colors.white,
-            ),
-            child: Image.asset("assets/images/user.png", fit: BoxFit.fill),
-          ),
-        ),
-        title: Text(
-          "Hello Johns,",
-          style: TextStyle(
-            fontFamily: 'SourceSansPro',
-            fontWeight: FontWeight.bold,
-            fontSize: 24,
-            color: Colors.black,
-          ),
-        ),
-        centerTitle: true,
-        bottom: PreferredSize(
-            child: Text(
-              "How are you today",
-              style: TextStyle(
-                fontFamily: 'SourceSansPro',
-                fontWeight: FontWeight.normal,
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(75),
+        child: AppBar(
+          elevation: 0,
+          backgroundColor: Colors.white,
+          actions: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Icon(
+                Icons.notifications_none,
+                size: 30,
+                color: Colors.grey,
               ),
             ),
-            preferredSize: null),
+          ],
+          leading: ClipRRect(
+            borderRadius: BorderRadius.all(Radius.circular(13)),
+            child: Container(
+              margin: EdgeInsets.only(left: 10, top: 20, right: 10),
+              decoration: BoxDecoration(
+                color: Colors.white,
+              ),
+              child: Image.asset("assets/images/user.png", fit: BoxFit.fill),
+            ),
+          ),
+          title: Text(
+            "Hello Johns,",
+            style: TextStyle(
+              fontFamily: 'SourceSansPro',
+              fontWeight: FontWeight.bold,
+              fontSize: 24,
+              color: Colors.black,
+            ),
+          ),
+          centerTitle: true,
+          bottom: PreferredSize(
+              child: Text(
+                "How are you today ?",
+                style: TextStyle(
+                  fontFamily: 'SourceSansPro',
+                ),
+              ),
+              preferredSize: null),
+        ),
       ),
       body: SizedBox.expand(
         child: PageView(

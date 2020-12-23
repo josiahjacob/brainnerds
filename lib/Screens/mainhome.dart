@@ -15,7 +15,7 @@ class HOME extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           SizedBox(
-            height: 20,
+            height: 35,
           ),
           Card(
               margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
@@ -34,10 +34,10 @@ class HOME extends StatelessWidget {
                 ),
               )),
           SizedBox(
-            height: 15,
+            height: 20,
           ),
           Padding(
-            padding: const EdgeInsets.all(15.0),
+            padding: const EdgeInsets.all(18.0),
             child: Text(
               'How Can We Help You ?',
               style: TextStyle(
@@ -213,7 +213,7 @@ class HOME extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               ButtonTheme(
-                minWidth: 100.0,
+                minWidth: 110.0,
                 height: 150.0,
                 buttonColor: Colors.white,
                 child: Stack(
@@ -268,7 +268,7 @@ class HOME extends StatelessWidget {
                 ),
               ),
               ButtonTheme(
-                minWidth: 100.0,
+                minWidth: 110.0,
                 height: 150.0,
                 buttonColor: Colors.white,
                 child: Stack(
