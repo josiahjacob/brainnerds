@@ -33,9 +33,6 @@ class HOME extends StatelessWidget {
                       fontWeight: FontWeight.bold),
                 ),
               )),
-          SizedBox(
-            height: 10,
-          ),
           Padding(
             padding: const EdgeInsets.all(18.0),
             child: Text(
